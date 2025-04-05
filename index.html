@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymTop - Tu Gimnasio de Confianza</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" integrity="" />
+</head>
+<body>
+    <header>
+        <div class="container">
+          <h1 class="logo">GymTop</h1>
+          <nav class="menu">
+            <ul>
+              <li>
+                <a href="#" class="menu-trigger">Menú</a>
+                <div class="mega-menu">
+                  <div class="mega-menu-content">
+                    <div class="mega-menu-section">
+                      <h3>Clases</h3>
+                      <ul>
+                        <li><a href="#">Musculación</a></li>
+                        <li><a href="#">CrossFit</a></li>
+                        <li><a href="#">Yoga</a></li>
+                        <li><a href="#">Spinning</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-menu-section">
+                      <h3>Entrenadores</h3>
+                      <ul>
+                        <li><a href="#">Nuestro Equipo</a></li>
+                        <li><a href="#">Especialidades</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-menu-section">
+                      <h3>Precios</h3>
+                      <ul>
+                        <li><a href="#">Planes Mensuales</a></li>
+                        <li><a href="#">Membresías</a></li>
+                        <li><a href="#">Promociones</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="video-background">
+          <video autoplay muted loop playsinline>
+            <source src="assets/video/bg-motivational-video.mp4" type="video/mp4">
+          </video>
+          <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+          <h1 class="animate-text">TRANSFORMA TU CUERPO HOY</h1>
+          <h2 class="animate-text delay-1">NO HAY UN MAÑANA</h2>
+          <!--<p class="animate-text delay-2">Únete a la comunidad fitness más motivada de la ciudad</p>
+           <a href="#" class="cta-button animate-text delay-3">COMIENZA HOY</a> -->
+        </div>
+      </section>
+      <!-- Fin Hero Section -->
+      
+      <!-- Products Section
+      ======================================================
+      Muestra los productos que se venden en la tienda, en este caso 
+      solo se muestran 3 productos, pero se pueden agregar o eliminar
+      según sea necesario. Cada tarjeta de producto tiene una imagen,
+      un título, una descripción y un enlace a la tienda.
+      ====================================================== -->
+      <section class="products-section">
+        <h2 class="section-title">CLASES DESTACADAS:</h2>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/images/clases/musculación.jpeg" alt="Musculación">
+              <div class="product-overlay"></div>
+              <div class="product-content">
+                <h3>MUSCULACION</h3>
+                <p>Hipertrofia muscular con los mejores entrenadores del país.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/images/clases/crossfit.jpg" alt="CrossFit">
+              <div class="product-overlay"></div>
+              <div class="product-content">
+                <h3>CROSSFIT</h3>
+                <p>Entrenamos el cuerpo y con las mejores actividades.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img src="assets/images/clases/yoga.jpeg" alt="Yoga">
+              <div class="product-overlay"></div>
+              <div class="product-content">
+                <h3>YOGA</h3>
+                <p>Entrena cuerpo y mente.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section de Estadisticas -->
+      <!-- Muestra estadisticas ficticias de la empresa, como cantidad de socios, cantidad de equipos, años de experiencia y porcentaje de calidad -->
+      <section class="stats-section">
+        <div class="container">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number" data-target="500">0</div>
+              <div class="stat-label">Socios Satisfechos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="50">0</div>
+              <div class="stat-label">Equipos Premium</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="10">0</div>
+              <div class="stat-label">Años de Experiencia</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-target="100" data-suffix="%">0</div>
+              <div class="stat-label">Calidad Garantizada</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonios Section -->
+      <section class="testimonials-section">
+        <h2 class="section-title">TESTIMONIOS</h2>
+        <div class="testimonials-carousel">
+          <div class="carousel-track">
+            <!-- Testimonio 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="quote-icon">“</div>
+                <p>Excelente calidad en todos sus productos. El servicio de atención al cliente es excepcional. Totalmente recomendado para cualquier persona que busque equipamiento de primera.</p>
+                <div class="testimonial-author">
+                  <img src="assets/images/clientes/user1.jpeg" alt="Juan Pérez">
+                  <div class="author-info">
+                    <h4>Juan Pérez</h4>
+                    <span>Cliente desde 2020</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="quote-icon">“</div>
+                <p>Los productos son de primera calidad y la entrega fue muy rápida. El asesoramiento que recibí fue fundamental para elegir el equipo adecuado para mi gimnasio en casa.</p>
+                <div class="testimonial-author">
+                  <img src="assets/images/clientes/user2.jpg" alt="María Gómez">
+                  <div class="author-info">
+                    <h4>María Gómez</h4>
+                    <span>Cliente desde 2021</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="quote-icon">“</div>
+                <p>Increible variedad de productos y precios muy competitivos. La calidad de las barras y discos es superior a cualquier otra que haya probado antes.</p>
+                <div class="testimonial-author">
+                  <img src="assets/images/clientes/user3.jpg" alt="Carlos Rodríguez">
+                  <div class="author-info">
+                    <h4>Carlos Rodríguez</h4>
+                    <span>Cliente desde 2022</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Copia del Testimonio 1 para loop infinito -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="quote-icon">“</div>
+                <p>Excelente calidad en todos sus productos. El servicio de atención al cliente es excepcional. Totalmente recomendado para cualquier persona que busque equipamiento de primera.</p>
+                <div class="testimonial-author">
+                  <img src="assets/images/clientes/user1.jpeg" alt="Juan Pérez">
+                  <div class="author-info">
+                    <h4>Juan Pérez</h4>
+                    <span>Cliente desde 2020</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-grid">
+            <!-- Newsletter Section -->
+            <div class="footer-section">
+              <h3 >Suscríbete al Newsletter</h3>
+              <p>Recibe las últimas novedades y ofertas especiales directamente en tu correo.</p>
+              <form class="newsletter-form" id="newsletter-form">
+                <div class="form-group">
+                  <input type="email" placeholder="Tu correo electrónico" required>
+                  <button type="submit">Suscribirse</button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Contact & Social Section -->
+            <div class="footer-section">
+              <h3 >Síguenos en Redes</h3>
+              <div class="social-links">
+                <a href="#" class="social-link">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+              <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +54 (11) 1234-5678</p>
+                <p><i class="fas fa-envelope"></i> info@gymtop.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Siempreviva 742, Springfield</p>
+              </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="footer-section map-section">
+              <h3>Encóntranos</h3>
+              <div class="map-container">
+                <iframe 
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=-58.38752,-34.60376,-58.37752,-34.59376&layer=mapnik" 
+                  width="100%" 
+                  height="250" 
+                  frameborder="0" 
+                  style="border: 1px solid #ccc">
+                </iframe>
+              </div>
+            </div>
+          </div>
+
+          <!-- Copyright -->
+          <div class="footer-bottom">
+            <p>&copy; 2025 GYMTOP. Todos los derechos reservados.</p>
+          </div>
+        </div>
+      </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/newsletter.js"></script>
+    <script src="js/counter.js"></script>
+</body>
+</html>
