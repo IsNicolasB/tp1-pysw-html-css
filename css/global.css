@@ -39,6 +39,19 @@ header {
     letter-spacing: 1px;
 }
 
+.logo a {
+    text-decoration: none;
+    color: #ff4d4d;
+    transition: none;
+}
+
+.logo a:hover,
+.logo a:active,
+.logo a:visited {
+    text-decoration: none;
+    color: #ff4d4d;
+}
+
 .menu ul {
     list-style: none;
     display: flex;
@@ -254,13 +267,6 @@ header {
     animation-delay: 0.9s;
 }
 
-/* Products Section */
-.products-section {
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-    background: #f8f9fa;
-}
-
 /* Section Title */
 .section-title {
     text-align: center;
@@ -279,81 +285,6 @@ header {
     height: 3px;
     background-color: #ff4d4d;
     margin: 15px auto 0;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1rem;
-    padding: 0 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.product-card {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.product-image {
-    position: relative;
-    width: 100%;
-    height: 380px;
-    overflow: hidden;
-}
-
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.product-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0);
-    transition: background 0.3s ease;
-}
-
-.product-content {
-    position: absolute;
-    bottom: -100%;
-    left: 0;
-    width: 100%;
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    text-align: center;
-    transition: bottom 0.3s ease;
-}
-
-.product-card:hover .product-overlay {
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.product-card:hover .product-content {
-    bottom: 0;
-}
-
-.product-card:hover .product-image img {
-    transform: scale(1.1);
-}
-
-.product-content h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-}
-
-.product-content p {
-    margin-bottom: 15px;
-    font-size: 0.9rem;
 }
 
 /* Stats Section */

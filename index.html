@@ -7,13 +7,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/card-classes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" integrity="" />
 </head>
 <body>
     <header>
         <div class="container">
-          <h1 class="logo">GymTop</h1>
+          <h1 class="logo">
+            <a href="index.html">GymTop</a>
+          </h1>
           <nav class="menu">
             <ul>
               <li>
@@ -23,10 +26,10 @@
                     <div class="mega-menu-section">
                       <h3>Clases</h3>
                       <ul>
-                        <li><a href="#">Musculación</a></li>
-                        <li><a href="#">CrossFit</a></li>
-                        <li><a href="#">Yoga</a></li>
-                        <li><a href="#">Spinning</a></li>
+                        <li><a href="/pages/clases.html#musculacion">Musculación</a></li>
+                        <li><a href="/pages/clases.html#crossfit">CrossFit</a></li>
+                        <li><a href="/pages/clases.html#yoga">Yoga</a></li>
+                        <li><a href="/pages/clases.html#spinning">Spinning</a></li>
                       </ul>
                     </div>
                     <div class="mega-menu-section">
@@ -68,43 +71,43 @@
       </section>
       <!-- Fin Hero Section -->
       
-      <!-- Products Section
+      <!-- Classes Section
       ======================================================
-      Muestra los productos que se venden en la tienda, en este caso 
-      solo se muestran 3 productos, pero se pueden agregar o eliminar
-      según sea necesario. Cada tarjeta de producto tiene una imagen,
+      Muestra los clases que se venden en la tienda, en este caso 
+      solo se muestran 3 clases, pero se pueden agregar o eliminar
+      según sea necesario. Cada tarjeta de clase tiene una imagen,
       un título, una descripción y un enlace a la tienda.
       ====================================================== -->
-      <section class="products-section">
+      <section class="classes-section">
         <h2 class="section-title">CLASES DESTACADAS:</h2>
-        <div class="products-grid">
-          <div class="product-card">
-            <div class="product-image">
+        <div class="classes-grid">
+          <div class="class-card">
+            <div class="class-image">
               <img src="assets/images/clases/musculación.jpeg" alt="Musculación">
-              <div class="product-overlay"></div>
-              <div class="product-content">
+              <div class="class-overlay"></div>
+              <div class="class-content">
                 <h3>MUSCULACION</h3>
                 <p>Hipertrofia muscular con los mejores entrenadores del país.</p>
               </div>
             </div>
           </div>
 
-          <div class="product-card">
-            <div class="product-image">
+          <div class="class-card">
+            <div class="class-image">
               <img src="assets/images/clases/crossfit.jpg" alt="CrossFit">
-              <div class="product-overlay"></div>
-              <div class="product-content">
+              <div class="class-overlay"></div>
+              <div class="class-content">
                 <h3>CROSSFIT</h3>
-                <p>Entrenamos el cuerpo y con las mejores actividades.</p>
+                <p>Entrenamos el cuerpo con las mejores actividades.</p>
               </div>
             </div>
           </div>
 
-          <div class="product-card">
-            <div class="product-image">
+          <div class="class-card">
+            <div class="class-image">
               <img src="assets/images/clases/yoga.jpeg" alt="Yoga">
-              <div class="product-overlay"></div>
-              <div class="product-content">
+              <div class="class-overlay"></div>
+              <div class="class-content">
                 <h3>YOGA</h3>
                 <p>Entrena cuerpo y mente.</p>
               </div>
