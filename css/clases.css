@@ -6,13 +6,32 @@
 
 .classes-filters {
     display: flex;
-    justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+    background-color: #f4f4f4;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #f1f1f1;
 }
 
-.filter-input {
-    display: none;
+@media (min-width: 768px) {
+    .classes-filters {
+        justify-content: center;
+    }
+}
+
+.classes-filters::-webkit-scrollbar {
+    height: 8px;
+}
+
+.classes-filters::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.classes-filters::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
 }
 
 .filter-label {
@@ -33,6 +52,10 @@
 .filter-input:checked + .filter-label {
     background-color: #ff4d4d;
     color: white;
+}
+
+.filter-input{
+    display: none;
 }
 
 .classes-gallery {
@@ -87,4 +110,86 @@
 #yoga:checked ~ .classes-gallery .class-card.yoga,
 #spinning:checked ~ .classes-gallery .class-card.spinning{
     display: block;
+}
+
+/* Horarios Semanales */
+.schedule-section {
+    padding: 2rem 1rem;
+    background-color: #f4f4f4;
+}
+
+.schedule-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+    min-height: 300px;
+}
+
+.schedule-table th, 
+.schedule-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.schedule-table thead {
+    background-color: #333;
+    color: white;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para clases en la tabla */
+.schedule-table .class-musculacion {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.schedule-table .class-crossfit {
+    background-color: #4ecdc4;
+    color: white;
+}
+
+.schedule-table .class-yoga {
+    background-color: #45b7d1;
+    color: white;
+}
+
+.schedule-table .class-spinning {
+    background-color: #f9d56e;
+    color: #333;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .schedule-table {
+        font-size: 0.8rem;
+    }
+
+    .schedule-table th, 
+    .schedule-table td {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .schedule-table-container {
+        overflow-x: scroll;
+    }
+
+    .schedule-table {
+        font-size: 0.7rem;
+    }
+
+    .schedule-table th, 
+    .schedule-table td {
+        padding: 6px;
+    }
 }
