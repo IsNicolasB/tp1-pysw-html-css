@@ -12,7 +12,27 @@
     <header>
         <div class="container">
           <h1 class="logo">
-            <a href="../index.html">GymTop</a>
+            <a href="../index.html">
+              <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
+                <g class="logo-barbell">
+                  <!-- Barra central -->
+                  <rect class="logo-bar" x="10" y="22" width="80" height="6" rx="3"/>
+                  
+                  <!-- Disco izquierdo -->
+                  <g transform="translate(5, 0)">
+                    <rect class="logo-plate" x="5" y="13" width="24" height="24" rx="4"/>
+                    <rect class="logo-weight" x="8" y="16" width="18" height="18" rx="2" fill="white" stroke="#ff6b00" stroke-width="2"/>
+                  </g>
+                  
+                  <!-- Disco derecho -->
+                  <g transform="translate(-5, 0)">
+                    <rect class="logo-plate" x="71" y="13" width="24" height="24" rx="4"/>
+                    <rect class="logo-weight" x="74" y="16" width="18" height="18" rx="2" fill="white" stroke="#ff6b00" stroke-width="2"/>
+                  </g>
+                </g>
+              </svg>
+              FITPRO
+            </a>
           </h1>
           <nav class="menu">
             <ul>
@@ -23,25 +43,31 @@
                     <div class="mega-menu-section">
                       <h3>Clases</h3>
                       <ul>
-                        <li><a href="classes.html#musculacion">Musculación</a></li>
-                        <li><a href="classes.html#crossfit">CrossFit</a></li>
-                        <li><a href="classes.html#yoga">Yoga</a></li>
-                        <li><a href="classes.html#spinning">Spinning</a></li>
+                        <li><a href="classes.html">Ver Todas las Clases</a></li>
                       </ul>
                     </div>
                     <div class="mega-menu-section">
                       <h3>Entrenadores</h3>
                       <ul>
                         <li><a href="trainers.html">Nuestro Equipo</a></li>
-                        <li><a href="trainers.html#especialidades">Especialidades</a></li>
                       </ul>
                     </div>
                     <div class="mega-menu-section">
                       <h3>Precios</h3>
                       <ul>
-                        <li><a href="pricing.html#planes-mensuales">Planes Mensuales</a></li>
-                    <li><a href="pricing.html#membresias">Membresías</a></li>
-                    <li><a href="pricing.html#promociones">Promociones</a></li>
+                        <li><a href="pricing.html">Planes y Membresías</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-menu-section">
+                      <h3>Unirme Ahora</h3>
+                      <ul>
+                        <li><a href="contact.html">Contacto</a></li>
+                      </ul>
+                    </div>
+                    <div class="mega-menu-section">
+                      <h3>Blog</h3>
+                      <ul>
+                        <li><a href="blog.html">Blog de Fitness</a></li>
                       </ul>
                     </div>
                   </div>
@@ -49,6 +75,9 @@
               </li>
             </ul>
           </nav>
+          <button class="dark-mode-toggle" aria-label="Cambiar modo oscuro/claro">
+            <i class="fas fa-moon"></i>
+          </button>
         </div>
     </header>
 
@@ -242,7 +271,7 @@
       </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/newsletter.js"></script>
-    
+    <script src="../js/newsletter.js"></script>
+    <script src="../js/darkmode.js"></script>
 </body>
 </html>
