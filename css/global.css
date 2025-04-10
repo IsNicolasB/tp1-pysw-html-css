@@ -10,12 +10,39 @@ body {
     line-height: 1.6;
 }
 
+/* Variables de color */
+:root {
+    /* Colores modo claro */
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --primary-color: #ff4d4d;
+    --secondary-color: #f8f9fa;
+    --accent-color: #f1f1f1;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+:root.dark-mode {
+    /* Colores modo oscuro */
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #ff6b6b;
+    --secondary-color: #1e1e1e;
+    --accent-color: #2c2c2c;
+    --shadow-color: rgba(255,255,255,0.1);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
 /* Header */
 header {
-    background: #ffffff;
-    color: #333;
+    background: var(--secondary-color);
+    color: var(--text-color);
     padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px var(--shadow-color);
     position: fixed;
     width: 100%;
     top: 0;
@@ -32,16 +59,54 @@ header {
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #ff4d4d;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .logo a {
     text-decoration: none;
-    color: #ff4d4d;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo svg {
+    width: 40px;
+    height: 40px;
+}
+
+/* Animaciones del logo */
+.logo-weight {
+    fill: var(--primary-color);
+    transform-origin: center;
+}
+
+.logo-barbell {
+    animation: lift 2s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.logo-plate {
+    fill: var(--primary-color);
+}
+
+.logo-bar {
+    fill: var(--text-color);
+}
+
+@keyframes lift {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--primary-color);
     transition: none;
 }
 
@@ -49,7 +114,7 @@ header {
 .logo a:active,
 .logo a:visited {
     text-decoration: none;
-    color: #ff4d4d;
+    color: var(--primary-color);
 }
 
 .menu ul {
@@ -63,7 +128,7 @@ header {
 }
 
 .menu a {
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: block;
@@ -73,7 +138,7 @@ header {
 }
 
 .menu a:hover {
-    color: #ff4d4d;
+    color: var(--primary-color);
 }
 
 .menu-trigger {
@@ -96,10 +161,10 @@ header {
     position: absolute;
     top: 100%;
     right: 0;
-    background: #ffffff;
+    background: var(--secondary-color);
     display: none;
     padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px var(--shadow-color);
     border-radius: 8px;
     min-width: 600px;
 }
@@ -126,7 +191,7 @@ header {
 }
 
 .mega-menu-section h3 {
-    color: #ff4d4d;
+    color: var(--primary-color);
     font-size: 1.1rem;
     margin-bottom: 1rem;
     font-weight: 600;
@@ -148,7 +213,7 @@ header {
 }
 
 .mega-menu a:hover {
-    color: #ff4d4d;
+    color: var(--primary-color);
     background: transparent;
     padding-left: 0.5rem;
 }
@@ -159,7 +224,7 @@ header {
     height: 100vh;
     width: 100%;
     overflow: hidden;
-    margin-top: 70px; /* Espacio para el header fijo */
+    margin-top: 0; /* Espacio para el header fijo */
 }
 
 .video-background {
@@ -221,7 +286,7 @@ header {
 
 .cta-button {
     display: inline-block;
-    background-color: #ff4d4d;
+    background-color: var(--primary-color);
     color: white;
     padding: 12px 24px;
     text-decoration: none;
@@ -231,7 +296,7 @@ header {
     letter-spacing: 1px;
     transition: all 0.3s ease;
     margin-top: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .cta-button:hover {
@@ -273,7 +338,7 @@ header {
 .section-title {
     text-align: center;
     font-size: 2.5rem;
-    color: #333;
+    color: var(--text-color);
     margin-bottom: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -285,7 +350,7 @@ header {
     display: block;
     width: 80px;
     height: 3px;
-    background-color: #ff4d4d;
+    background-color: var(--primary-color);
     margin: 15px auto 0;
 }
 
@@ -321,7 +386,7 @@ header {
     position: relative;
     display: inline-block;
     animation: countUp 2s ease-out forwards;
-    background: linear-gradient(45deg, #ff4d4d, #ff8080);
+    background: linear-gradient(45deg, var(--primary-color), #ff8080);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -362,7 +427,7 @@ header {
 /* Testimonials Section */
 .testimonials-section {
     padding-top: 4rem;
-    background: #f8f9fa;
+    background: var(--accent-color);
     overflow: hidden;
 }
 
@@ -400,7 +465,7 @@ header {
 }
 
 .testimonial-content {
-    background: white;
+    background: var(--accent-color);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -414,7 +479,7 @@ header {
 
 .quote-icon {
     font-size: 4rem;
-    color: #ff4d4d;
+    color: var(--primary-color);
     line-height: 1;
     position: absolute;
     top: -10px;
@@ -446,7 +511,7 @@ header {
 
 .author-info h4 {
     font-size: 1.1rem;
-    color: #333;
+    color: var(--text-color);
     margin: 0;
 }
 
@@ -478,7 +543,7 @@ header {
 .footer-section h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: #ff4d4d;
+    color: var(--primary-color);
     text-align: center;
 }
 
@@ -513,7 +578,7 @@ header {
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 5px;
-    background: #ff4d4d;
+    background: var(--primary-color);
     color: white;
     font-weight: 600;
     cursor: pointer;
@@ -547,7 +612,7 @@ header {
 }
 
 .social-link:hover {
-    background: #ff4d4d;
+    background: var(--primary-color);
     transform: translateY(-3px);
 }
 
@@ -561,7 +626,7 @@ header {
 }
 
 .contact-info i {
-    color: #ff4d4d;
+    color: var(--primary-color);
 }
 
 /* Map Container */
@@ -589,6 +654,24 @@ header {
     font-size: 0.9rem;
 }
 
+/* Botón de modo oscuro */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--accent-color);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background: var(--primary-color);
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-grid {
@@ -603,4 +686,82 @@ header {
     .newsletter-form button {
         width: 100%;
     }
+}
+
+/* Testimonios */
+.testimonial-card {
+    background: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    padding: 2rem;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card .quote-icon {
+    color: var(--primary-color);
+}
+
+.testimonial-card p {
+    color: var(--text-color);
+}
+
+.testimonial-author .author-info h4 {
+    color: var(--text-color);
+}
+
+.testimonial-author .author-info span {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+/* Clases */
+.class-card {
+    background: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.class-card h3 {
+    color: var(--text-color);
+}
+
+.class-card p {
+    color: var(--text-color);
+}
+
+.class-card .class-price {
+    color: var(--primary-color);
+}
+
+/* Entrenadores */
+.trainer-card {
+    background: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.trainer-card h3 {
+    color: var(--text-color);
+}
+
+.trainer-card p {
+    color: var(--text-color);
+}
+
+/* Contadores */
+.counter-item {
+    background: var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-color);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.counter-item .counter-number {
+    color: var(--primary-color);
+}
+
+.counter-item .counter-label {
+    color: var(--text-color);
 }
