@@ -19,6 +19,7 @@ body {
     --secondary-color: #f8f9fa;
     --accent-color: #f1f1f1;
     --shadow-color: rgba(0,0,0,0.1);
+    --third-color: #f8f9fa;
 }
 
 :root.dark-mode {
@@ -29,6 +30,7 @@ body {
     --secondary-color: #1e1e1e;
     --accent-color: #2c2c2c;
     --shadow-color: rgba(255,255,255,0.1);
+    --third-color: #f8f9fa;
 }
 
 body {
@@ -159,8 +161,8 @@ header {
 
 .mega-menu {
     position: absolute;
+    justify-content: center;
     top: 100%;
-    right: 0;
     background: var(--secondary-color);
     display: none;
     padding: 2rem;
@@ -174,8 +176,6 @@ header {
     content: '';
     position: absolute;
     top: -1rem;
-    left: 0;
-    right: 0;
     height: 1rem;
     background: transparent;
 }
@@ -206,7 +206,7 @@ header {
 
 .mega-menu a {
     padding: 0.5rem 0;
-    color: #666;
+    color: var(--text-color);
     font-size: 0.95rem;
     transition: all 0.3s;
     border-radius: 0;
@@ -367,11 +367,32 @@ header {
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling en iOS */
+    scrollbar-width: thin; /* Scrollbar delgada en Firefox */
+    scrollbar-color: var(--primary-color) var(--shadow-color); /* Color de scrollbar */
+}
+
+.stats-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.stats-grid::-webkit-scrollbar-track {
+    background: var(--shadow-color);
+}
+
+.stats-grid::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(4, 250px);
+        padding-bottom: 1rem;
+    }
 }
 
 .stat-item {
@@ -656,15 +677,14 @@ header {
 
 /* Botón de modo oscuro */
 .dark-mode-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
+    position: relative;
     background: var(--accent-color);
     border: none;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 1000;
+    margin-left: 90px;
     transition: background 0.3s;
 }
 
@@ -720,14 +740,6 @@ header {
     border-radius: 8px;
     box-shadow: 0 4px 10px var(--shadow-color);
     transition: background 0.3s, box-shadow 0.3s;
-}
-
-.class-card h3 {
-    color: var(--text-color);
-}
-
-.class-card p {
-    color: var(--text-color);
 }
 
 .class-card .class-price {

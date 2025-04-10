@@ -19,7 +19,7 @@
   <header>
     <div class="container">
       <h1 class="logo">
-        <a href="../index.html">
+        <a href="../index.html" >
           <svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
             <g class="logo-barbell">
               <!-- Barra central -->
@@ -106,6 +106,7 @@
   <section class="classes-section">
     <h2 class="section-title">CLASES DESTACADAS:</h2>
     <div class="classes-grid">
+      
       <div class="class-card">
         <div class="class-image">
           <img src="assets/images/clases/musculación.jpeg" alt="Musculación">
@@ -258,16 +259,16 @@
         <div class="footer-section">
           <h3>Síguenos en Redes</h3>
           <div class="social-links">
-            <a href="#" class="social-link">
+            <a href="#" class="social-link" aria-label="Link de Facebook">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="social-link">
+            <a href="#" class="social-link" aria-label="Link de Instagram">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="social-link">
+            <a href="#" class="social-link" aria-label="Link de Twitter">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#" class="social-link">
+            <a href="#" class="social-link" aria-label="Link de YouTube">
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -302,32 +303,7 @@
     referrerpolicy="no-referrer"></script>
   <script src="js/newsletter.js"></script>
   <script src="js/counter.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const darkModeToggle = document.querySelector('.dark-mode-toggle');
-      const root = document.documentElement;
-      const moonIcon = darkModeToggle.querySelector('i');
-
-      // Verificar preferencia de modo oscuro guardada
-      const savedMode = localStorage.getItem('dark-mode');
-      if (savedMode === 'enabled') {
-        root.classList.add('dark-mode');
-        moonIcon.classList.replace('fa-moon', 'fa-sun');
-      }
-
-      darkModeToggle.addEventListener('click', () => {
-        if (root.classList.contains('dark-mode')) {
-          root.classList.remove('dark-mode');
-          moonIcon.classList.replace('fa-sun', 'fa-moon');
-          localStorage.setItem('dark-mode', 'disabled');
-        } else {
-          root.classList.add('dark-mode');
-          moonIcon.classList.replace('fa-moon', 'fa-sun');
-          localStorage.setItem('dark-mode', 'enabled');
-        }
-      });
-    });
-  </script>
+  <script src="js/darkmode.js"></script>
 </body>
 
 </html>

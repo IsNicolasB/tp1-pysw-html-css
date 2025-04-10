@@ -1,6 +1,6 @@
 /* Estilos Generales de Página de Precios */
 .pricing-page {
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
     padding-top: calc(2rem + 80px);
     min-height: 100vh;
 }
@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e0e0e0;
+    background-color: var(--shadow-color);
     border-radius: 30px;
     width: 300px;
     margin: 0 auto;
@@ -37,7 +37,7 @@
     padding: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #666;
+    color: var(--second-color);
     font-weight: bold;
 }
 
@@ -58,7 +58,7 @@
 }
 
 .plan {
-    background-color: white;
+    background-color: var(--accent-color);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -81,7 +81,7 @@
 }
 
 .plan h2 {
-    color: #333;
+    color: var(--second-color);
     margin-bottom: 1rem;
 }
 

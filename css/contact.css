@@ -1,6 +1,6 @@
 /* Estilos Generales del Formulario de Contacto */
 .contact-page {
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
     padding: 2rem 0;
     padding-top: calc(2rem + 80px); /* Altura del header + padding extra */
     min-height: 100vh;
@@ -24,7 +24,7 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
-    background-color: white;
+    background-color: var(--accent-color);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 2rem;
@@ -44,14 +44,14 @@
 
 .form-group label {
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     padding: 0.75rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--shadow-color);
     border-radius: 5px;
     transition: all 0.3s ease;
 }
@@ -90,6 +90,33 @@
     display: block;
 }
 
+/* Color de fondo para area de input/select/textarea*/
+
+.input-area{
+    background-color: var(--shadow-color);
+    color: var(--text-color);
+}
+
+/* Estilos para selectores en modo oscuro */
+select {
+    background-color: var(--shadow-color);
+    color: var(--text-color);
+    border: 1px solid var(--shadow-color);
+}
+
+/* Estilos para las opciones de los selectores */
+select option {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+/* Estilos para labels de optgroup */
+select optgroup {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
 /* Botón de Envío */
 .submit-btn {
     background-color: #ff4d4d;
@@ -112,7 +139,7 @@
 .submit-btn .spinner {
     display: none;
     border: 3px solid rgba(255, 255, 255, 0.3);
-    border-top: 3px solid white;
+    border-top: 3px solid var(--shadow-color);
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -149,7 +176,7 @@
 }
 
 .modal-content {
-    background-color: white;
+    background-color: var(--accent-color);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;

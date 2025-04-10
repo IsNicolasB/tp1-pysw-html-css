@@ -1,8 +1,9 @@
+
 /* Classes Section */
 .classes-section {
     padding-top: 4rem;
     padding-bottom: 2rem;
-    background: var(--accent-color);
+    background: --acc;
 }
 
 .classes-grid {
@@ -17,7 +18,6 @@
 .class-card {
     position: relative;
     overflow: hidden;
-    background: var(--secondary-color);
     border-radius: 10px;
     box-shadow: 0 4px 6px var(--shadow-color);
     text-align: center;
@@ -87,7 +87,7 @@
 }
 
 .class-content p {
-    color: var(--text-color);
+    color: var(--third-color);
     margin-bottom: 1rem;
 }
 

@@ -49,7 +49,7 @@
 
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 2rem;
 }
 
@@ -164,9 +164,9 @@
 
 /* Estilos para Comentarios */
 .post-comments {
-    background-color: #f4f4f4;
+    background-color: var(--shadow-color);
     padding: 1rem;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid var(--background-color);
     width: 100%;
     order: 3;
 }
@@ -181,7 +181,7 @@
     align-items: flex-start;
     gap: 1rem;
     margin-bottom: 1rem;
-    background-color: white;
+    background-color: var(--accent-color);
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
