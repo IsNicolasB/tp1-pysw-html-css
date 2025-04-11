@@ -8,6 +8,8 @@
 body {
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 }
 
 /* Variables de color */
@@ -356,37 +358,63 @@ header {
 
 /* Stats Section */
 .stats-section {
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../assets/images/stats-bg.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('../assets/images/gym/fitpro-wide.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     color: white;
 }
 
+.stats-section .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
 .stats-grid {
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
-    gap: 1rem;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling en iOS */
-    scrollbar-width: thin; /* Scrollbar delgada en Firefox */
-    scrollbar-color: var(--primary-color) var(--shadow-color); /* Color de scrollbar */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.stats-grid::-webkit-scrollbar {
-    height: 8px;
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
 }
 
-.stats-grid::-webkit-scrollbar-track {
-    background: var(--shadow-color);
+.stat-item:hover {
+    transform: scale(1.05);
 }
 
-.stats-grid::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color);
-    border-radius: 4px;
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 @media screen and (max-width: 768px) {
@@ -443,6 +471,19 @@ header {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -818,4 +859,31 @@ button:focus-visible,
 .class-card:focus-within .class-image,
 .class-card:focus-within .class-content {
     opacity: 0.9;
+}
+
+/* Scroll Snap para página de inicio */
+.hero-section,
+.classes-section,
+.stats-section,
+.testimonials-section,
+.about-section,
+.contact-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Scrollbar personalizada para scroll snap */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--shadow-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 5px;
 }
