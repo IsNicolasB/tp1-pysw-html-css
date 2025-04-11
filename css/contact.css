@@ -64,6 +64,16 @@
     box-shadow: 0 0 5px rgba(255, 77, 77, 0.5);
 }
 
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible {
+    border-color: var(--primary-color);
+    outline: 2px solid var(--primary-color);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.2);
+    transition: all 0.3s ease;
+}
+
 /* Validación en tiempo real */
 .form-group input:valid,
 .form-group select:valid,
@@ -130,6 +140,13 @@ select optgroup {
     align-items: center;
     position: relative;
     transition: background-color 0.3s ease;
+}
+
+.submit-btn:focus-visible {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.3);
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
 }
 
 .submit-btn:hover {

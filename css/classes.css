@@ -116,6 +116,18 @@
     display: block;
 }
 
+/* Estilos de Focus para Filtros */
+.class-filter-input:focus-visible + .class-filter-label,
+.class-filter-label:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    transform: scale(1.05);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
 /* Horarios Semanales */
 .schedule-section {
     padding: 2rem 1rem;

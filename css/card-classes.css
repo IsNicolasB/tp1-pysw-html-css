@@ -110,3 +110,21 @@
 .class-card .cta-button:hover {
     background-color: var(--text-color);
 }
+
+/* Estilos de Focus Visible para Tarjetas de Clases */
+.class-card:focus-visible {
+    transform: scale(1.05);
+    z-index: 10;
+    outline: 3px solid var(--primary-color);
+    outline-offset: 5px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.class-filter-btn:focus-visible {
+    background-color: var(--primary-color);
+    color: white;
+    outline: 3px solid rgba(255, 77, 77, 0.5);
+    outline-offset: 3px;
+    transform: scale(1.1);
+}

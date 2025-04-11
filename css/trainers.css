@@ -91,6 +91,32 @@
     margin-bottom: 1rem;
 }
 
+/* Estilos de Focus para Tarjetas de Entrenadores */
+.trainer-card:focus-visible,
+.trainer-card:focus-within {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 5px;
+    transform: scale(1.05);
+    z-index: 10;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Focus para el contenido interno de la tarjeta */
+.trainer-card:focus-within .trainer-info,
+.trainer-card:focus-within .trainer-skills {
+    opacity: 0.9;
+}
+
+/* Estilos de Focus para Botones de Entrenadores */
+.trainer-social-links a:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+    transform: scale(1.2);
+    background-color: var(--accent-color);
+    transition: all 0.3s ease;
+}
+
 /* Barras de Habilidades */
 .skill {
     margin-bottom: 0.5rem;

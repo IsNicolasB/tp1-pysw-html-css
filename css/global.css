@@ -366,6 +366,7 @@ header {
 }
 
 .stats-grid {
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, minmax(200px, 1fr));
     gap: 1rem;
@@ -776,4 +777,45 @@ header {
 
 .counter-item .counter-label {
     color: var(--text-color);
+}
+
+/* Estilos de Focus Visible Globales */
+a:focus-visible,
+button:focus-visible,
+.cta-button:focus-visible,
+.dark-mode-toggle:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 3px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 3px rgba(255, 77, 77, 0.3);
+    transition: all 0.3s ease;
+}
+
+/* Focus para tarjetas y elementos interactivos */
+.class-card:focus-visible,
+.trainer-card:focus-visible,
+.pricing-card:focus-visible {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 10;
+    outline: 3px solid var(--primary-color);
+    outline-offset: 5px;
+}
+
+/* Focus para cards en index y otras páginas */
+.class-card:focus,
+.class-card:focus-visible,
+.class-card:focus-within {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 5px;
+    transform: scale(1.03);
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+/* Asegurar que elementos internos de la card también sean focusables */
+.class-card:focus-within .class-image,
+.class-card:focus-within .class-content {
+    opacity: 0.9;
 }
